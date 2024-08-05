@@ -36,8 +36,9 @@
 }
 .logo {
     position: fixed;
-    top: 20px;
+    
     left: 50%;
+    bottom:80%;
     transform: translateX(-50%);
     max-width: 150px;
 }
