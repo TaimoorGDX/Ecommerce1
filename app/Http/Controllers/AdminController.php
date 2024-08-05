@@ -10,8 +10,9 @@ class AdminController extends Controller
 {
     public function view_category()
     {
+        $data=category::all();
 
-        return view('admin.category');
+        return view('admin.category',compact('data'));
 
     }
 
@@ -28,6 +29,15 @@ class AdminController extends Controller
     }
     public function view_product(){
         return view('admin.product');
+    }
+
+    public function delete_category($id)
+    {
+        $data=category::find($id);
+        $data->delete();
+
+        return redirect()->back()->with('message','Category Deleted Successfully');
+
     }
 
 }
