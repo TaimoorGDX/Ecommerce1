@@ -57,7 +57,7 @@
 						</li>
 						@if (Route::has('login'))
 						@auth
-						<li class="nav-item active" style="padding-top: 4px"><x-app-layout>
+						<li class="nav-item active" style="padding-top: 4px;"><x-app-layout>
     
 						</x-app-layout></li>
 						@else
