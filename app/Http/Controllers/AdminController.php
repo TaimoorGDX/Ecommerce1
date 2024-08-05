@@ -27,7 +27,13 @@ class AdminController extends Controller
         
         return redirect()->back()->with('message','Category Added Successfully');
     }
-    public function view_product(){
+    public function view_product()
+    {
+        $category=new category;
+        return view('admin.product',compact('category'));
+    }
+    public function add_product(Request $request)
+    {
         return view('admin.product');
     }
 
