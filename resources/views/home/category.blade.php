@@ -1,6 +1,31 @@
-@extends('frontend.layouts.main')
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
 
-@section('main-container')
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{{url('frontend/img/fav.png')}}">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta charset="UTF-8">
+    <title>Cartify</title>
+    <link rel="stylesheet" href="{{url('frontend/css/linearicons.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/owl.carousel.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/font-awesome.min.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/themify-icons.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/nice-select.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/nouislider.min.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/bootstrap.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/main.css')}}"/>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	@include('home.header')
 	<!-- Start Banner Area -->
 	<section class="banner-area organic-breadcrumb">
 		<div class="container">
@@ -849,4 +874,19 @@
 		</div>
 	</div>
 	
-@endsection
+	@include('home.footer')
+	<!-- End footer Area -->    
+	<script src="{{url('frontend/js/vendor/jquery-2.2.4.min.js')}}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+		 crossorigin="anonymous"></script>
+		<script src="{{url('frontend/js/vendor/bootstrap.min.js')}}"></script>
+		<script src="{{url('frontend/js/jquery.ajaxchimp.min.js')}}"></script>
+		<script src="{{url('frontend/js/jquery.nice-select.min.js')}}"></script>
+		<script src="{{url('frontend/js/jquery.sticky.js')}}"></script>
+		<script src="{{url('frontend/js/nouislider.min.js')}}"></script>
+		<script src="{{url('frontend/js/jquery.magnific-popup.min.js')}}"></script>
+		<script src="{{url('frontend/js/owl.carousel.min.js')}}"></script>
+		<script src="{{url('frontend/js/main.js')}}"></script>
+	</body>
+	
+	</html>

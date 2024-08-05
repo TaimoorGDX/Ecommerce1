@@ -1,6 +1,31 @@
-@extends('frontend.layouts.main')
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
 
-@section('main-container')
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{{url('frontend/img/fav.png')}}')}}">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta charset="UTF-8">
+    <title>Cartify</title>
+    <link rel="stylesheet" href="{{url('frontend/css/linearicons.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/owl.carousel.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/font-awesome.min.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/themify-icons.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/nice-select.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/nouislider.min.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/bootstrap.css')}}"/>
+    <link rel="stylesheet" href="{{url('frontend/css/main.css')}}"/>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	@include('home.header')
 	<!-- Start Banner Area -->
 	<section class="banner-area organic-breadcrumb">
 		<div class="container">
@@ -25,13 +50,13 @@
 				<div class="col-lg-6">
 					<div class="s_Product_carousel">
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+							<img class="img-fluid" src="{{url('frontend/img/category/s-p1.jpg')}}" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+							<img class="img-fluid" src="{{url('frontend/img/category/s-p1.jpg')}}" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+							<img class="img-fluid" src="{{url('frontend/img/category/s-p1.jpg')}}" alt="">
 						</div>
 					</div>
 				</div>
@@ -183,7 +208,7 @@
 								<div class="review_item">
 									<div class="media">
 										<div class="d-flex">
-											<img src="img/product/review-1.png" alt="">
+											<img src="{{url('frontend/img/product/review-1.png')}}" alt="">
 										</div>
 										<div class="media-body">
 											<h4>Blake Ruiz</h4>
@@ -198,7 +223,7 @@
 								<div class="review_item reply">
 									<div class="media">
 										<div class="d-flex">
-											<img src="img/product/review-2.png" alt="">
+											<img src="{{url('frontend/img/product/review-2.png')}}" alt="">
 										</div>
 										<div class="media-body">
 											<h4>Blake Ruiz</h4>
@@ -213,7 +238,7 @@
 								<div class="review_item">
 									<div class="media">
 										<div class="d-flex">
-											<img src="img/product/review-3.png" alt="">
+											<img src="{{url('frontend/img/product/review-3.png')}}" alt="">
 										</div>
 										<div class="media-body">
 											<h4>Blake Ruiz</h4>
@@ -292,7 +317,7 @@
 								<div class="review_item">
 									<div class="media">
 										<div class="d-flex">
-											<img src="img/product/review-1.png" alt="">
+											<img src="{{url('frontend/img/product/review-1.png')}}" alt="">
 										</div>
 										<div class="media-body">
 											<h4>Blake Ruiz</h4>
@@ -310,7 +335,7 @@
 								<div class="review_item">
 									<div class="media">
 										<div class="d-flex">
-											<img src="img/product/review-2.png" alt="">
+											<img src="{{url('frontend/img/product/review-2.png')}}" alt="">
 										</div>
 										<div class="media-body">
 											<h4>Blake Ruiz</h4>
@@ -328,7 +353,7 @@
 								<div class="review_item">
 									<div class="media">
 										<div class="d-flex">
-											<img src="img/product/review-3.png" alt="">
+											<img src="{{url('frontend/img/product/review-3.png')}}" alt="">
 										</div>
 										<div class="media-body">
 											<h4>Blake Ruiz</h4>
@@ -408,7 +433,7 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
 							<div class="single-related-product d-flex">
-								<a href="#"><img src="img/r1.jpg" alt=""></a>
+								<a href="#"><img src="{{url('frontend/img/r1.jpg')}}" alt=""></a>
 								<div class="desc">
 									<a href="#" class="title">Black lace Heels</a>
 									<div class="price">
@@ -420,7 +445,7 @@
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
 							<div class="single-related-product d-flex">
-								<a href="#"><img src="img/r2.jpg" alt=""></a>
+								<a href="#"><img src="{{url('frontend/img/r2.jpg')}}" alt=""></a>
 								<div class="desc">
 									<a href="#" class="title">Black lace Heels</a>
 									<div class="price">
@@ -432,7 +457,7 @@
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
 							<div class="single-related-product d-flex">
-								<a href="#"><img src="img/r3.jpg" alt=""></a>
+								<a href="#"><img src="{{url('frontend/img/r3.jpg')}}" alt=""></a>
 								<div class="desc">
 									<a href="#" class="title">Black lace Heels</a>
 									<div class="price">
@@ -444,7 +469,7 @@
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
 							<div class="single-related-product d-flex">
-								<a href="#"><img src="img/r5.jpg" alt=""></a>
+								<a href="#"><img src="{{url('frontend/img/r5.jpg')}}" alt=""></a>
 								<div class="desc">
 									<a href="#" class="title">Black lace Heels</a>
 									<div class="price">
@@ -456,7 +481,7 @@
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
 							<div class="single-related-product d-flex">
-								<a href="#"><img src="img/r6.jpg" alt=""></a>
+								<a href="#"><img src="{{url('frontend/img/r6.jpg')}}" alt=""></a>
 								<div class="desc">
 									<a href="#" class="title">Black lace Heels</a>
 									<div class="price">
@@ -468,7 +493,7 @@
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
 							<div class="single-related-product d-flex">
-								<a href="#"><img src="img/r7.jpg" alt=""></a>
+								<a href="#"><img src="{{url('frontend/img/r7.jpg')}}" alt=""></a>
 								<div class="desc">
 									<a href="#" class="title">Black lace Heels</a>
 									<div class="price">
@@ -480,7 +505,7 @@
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6">
 							<div class="single-related-product d-flex">
-								<a href="#"><img src="img/r9.jpg" alt=""></a>
+								<a href="#"><img src="{{url('frontend/img/r9.jpg')}}" alt=""></a>
 								<div class="desc">
 									<a href="#" class="title">Black lace Heels</a>
 									<div class="price">
@@ -492,7 +517,7 @@
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6">
 							<div class="single-related-product d-flex">
-								<a href="#"><img src="img/r10.jpg" alt=""></a>
+								<a href="#"><img src="{{url('frontend/img/r10.jpg')}}" alt=""></a>
 								<div class="desc">
 									<a href="#" class="title">Black lace Heels</a>
 									<div class="price">
@@ -504,7 +529,7 @@
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6">
 							<div class="single-related-product d-flex">
-								<a href="#"><img src="img/r11.jpg" alt=""></a>
+								<a href="#"><img src="{{url('frontend/img/r11.jpg')}}" alt=""></a>
 								<div class="desc">
 									<a href="#" class="title">Black lace Heels</a>
 									<div class="price">
@@ -519,7 +544,7 @@
 				<div class="col-lg-3">
 					<div class="ctg-right">
 						<a href="#" target="_blank">
-							<img class="img-fluid d-block mx-auto" src="img/category/c5.jpg" alt="">
+							<img class="img-fluid d-block mx-auto" src="{{url('frontend/img/category/c5.jpg')}}" alt="">
 						</a>
 					</div>
 				</div>
@@ -527,4 +552,19 @@
 		</div>
 	</section>
 	<!-- End related-product Area -->
-@endsection
+	@include('home.footer')
+	<!-- End footer Area -->    
+	<script src="{{url('frontend/js/vendor/jquery-2.2.4.min.js')}}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+		 crossorigin="anonymous"></script>
+		<script src="{{url('frontend/js/vendor/bootstrap.min.js')}}"></script>
+		<script src="{{url('frontend/js/jquery.ajaxchimp.min.js')}}"></script>
+		<script src="{{url('frontend/js/jquery.nice-select.min.js')}}"></script>
+		<script src="{{url('frontend/js/jquery.sticky.js')}}"></script>
+		<script src="{{url('frontend/js/nouislider.min.js')}}"></script>
+		<script src="{{url('frontend/js/jquery.magnific-popup.min.js')}}"></script>
+		<script src="{{url('frontend/js/owl.carousel.min.js')}}"></script>
+		<script src="{{url('frontend/js/main.js')}}"></script>
+	</body>
+	
+	</html>

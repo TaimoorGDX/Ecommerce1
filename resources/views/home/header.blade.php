@@ -1,3 +1,5 @@
+
+
 <!-- Start Header Area -->
 <header class="header_area sticky-header">
 	<div class="main_menu">
@@ -19,24 +21,15 @@
 							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 							 aria-expanded="false">Shop</a>
 							<ul class="dropdown-menu">
-								<li class="nav-item"><a class="nav-link" href="{{url('/category')}}">Shop Category</a></li>
-								<li class="nav-item"><a class="nav-link" href="{{url('/single_product')}}">Product Details</a></li>
-								<li class="nav-item"><a class="nav-link" href="{{url('/checkout')}}">Product Checkout</a></li>
-								<li class="nav-item"><a class="nav-link" href="{{url('/cart')}}">Shopping Cart</a></li>
+								<li class="nav-item"><a class="nav-link" href="{{url('category')}}">Shop Category</a></li>
+								<li class="nav-item"><a class="nav-link" href="{{url('single_product')}}">Product Details</a></li>
+								<li class="nav-item"><a class="nav-link" href="{{url('checkout')}}">Product Checkout</a></li>
+								<li class="nav-item"><a class="nav-link" href="{{url('cart')}}">Shopping Cart</a></li>
 								<li class="nav-item"><a class="nav-link" href="{{url('/confirmation')}}">Confirmation</a></li>
 							</ul>
 						</li>
 
-						<li class="nav-item submenu dropdown">
-							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-							 aria-expanded="false">Pages</a>
-							<ul class="dropdown-menu">
-								<li class="nav-item"><a class="nav-link" href="{{url('/login')}}">Login</a></li>
-								<li class="nav-item"><a class="nav-link" href="{{url('/registration')}}">Registration</a></li>
-								<li class="nav-item"><a class="nav-link" href="{{url('/tracking')}}">Tracking</a></li>
-								
-							</ul>
-						</li>
+						<li class="nav-item active"><a class="nav-link" href="{{url('/tracking')}}">Tracking</a></li>
 						<li class="nav-item active"><a class="nav-link" href="{{url('/contact')}}">Contact</a></li>
 						
 						
