@@ -34,7 +34,7 @@
 						
 						
 
-						<li class="nav-item submenu dropdown">
+						<li class="nav-item ">
 							
 							<select id="location">
 								
