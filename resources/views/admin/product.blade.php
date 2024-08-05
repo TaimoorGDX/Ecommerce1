@@ -92,18 +92,18 @@
                   <label for="category">Product Category :</label>
                   <select class="text_color" id="category" name="category" required>
                     <option value="" disabled selected>Select category</option>
-                    <option value="shirt">Shirt</option>
-                    <option value="pants">Pants</option>
-                    <option value="shoes">Shoes</option>
-                    <option value="accessories">Accessories</option>
+                    @foreach($category as $category)
+                    <option value="{{$category->category_name}}">{{$category->category_name}}</option>
+                    @endforeach
+                    
                   </select>
                 </div>
                 <div>
                   <label for="image">Product Image :</label>
-                  <input type="file" id="image" name="image" required>
+                  <input type="file" name="image" required="">
                 </div>
                 <div>
-                  <button type="submit">Add Product</button>
+                  <button type="submit" value="Add Product">Add Product</button>
                 </div>
               </form>
             </div>
