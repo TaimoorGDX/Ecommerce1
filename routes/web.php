@@ -4,6 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 
 route::get('/',[HomeController::class,'index']);
+route::get('/cart',[HomeController::class,'cart']);
+route::get('/category',[HomeController::class,'category']);
+route::get('/checkout',[HomeController::class,'checkout']);
+route::get('/confirmation',[HomeController::class,'confirmation']);
+route::get('/tracking',[HomeController::class,'tracking']);
+route::get('/single_product',[HomeController::class,'single_product']);
+route::get('/contact',[HomeController::class,'contact']);
 
 Route::middleware([
     'auth:sanctum',
