@@ -55,7 +55,7 @@
                           </div>
                           <div>
                             <label>Product Image Here :</label>
-                            <input type="file" name="image"
+                            <input type="file" name="image">
                           </div>
                  </div>
 
