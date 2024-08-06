@@ -4,12 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\models\User;
+use App\Models\Product;
 
 use Illuminate\Support\Facades\Auth;
 
 
 class HomeController extends Controller
 {
+
+    public function index()
+    {
+        $product=Product::paginate(8);
+        return view('home.index',compact('product'));
+    }
+
+
     public function redirect()
     {    
         $usertype=Auth::user()->usertype;
@@ -21,10 +30,7 @@ class HomeController extends Controller
             return view('home.index');
         }
     }
-    public function index()
-    {
-    return view('home.index');
-    }
+    
     public function category()
     {
         return view('home.category');

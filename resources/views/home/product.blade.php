@@ -1,4 +1,5 @@
 
+	
 	<!-- start product Area -->
 	<section class="product-area">
 		<!-- single product slide -->
@@ -15,16 +16,18 @@
 					</div>
 				</div>
 				<div class="row">
+					@foreach($product as $products)
 					<!-- single product -->
 					<div class="col-lg-3 col-md-6">
 						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/earburd.jpg')}}" alt="Earburd" style="width: 150px;height: 130px;">
+						<img class="img-fluid" src="product/{{$products->image}}" alt="" 		style="width: 150px;height: 130px;">
 								<div class="product-details">
-									<h6>Earburds 
-								</h6>
+									<h6>{{$products->title}}</h6>
 									<div class="price">
-										<h6>$1235.00</h6>
-										<h6 class="l-through">$1300.00</h6>
+										<h6>${{$products->price}}</h6>
+										@if($products->discount_price!=null)
+										<h6 class="l-through">${{$products->discount_price}}</h6>
+										@endif
 									</div>
 								<div class="prd-bottom">
 
@@ -32,7 +35,7 @@
 										<span class="ti-bag"></span>
 										<p class="hover-text">add to bag</p>
 									</a>
-									<a href="" class="social-info">
+									<a href="" class="social-info"> 
 										<span class="lnr lnr-heart"></span>
 										<p class="hover-text">Wishlist</p>
 									</a>
@@ -49,370 +52,16 @@
 						</div>
 					</div>
 					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/microwave.jpg')}}" alt="Microwave" style="width: 150px;height: 130px;">
-								<div class="product-details">
-									<h6>Microwave for sale
-						</h6>
-									<div class="price">
-										<h6>$500.00</h6>
-										<h6 class="l-through">$670.00</h6>
-									</div>
-								<div class="prd-bottom">
 
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
 					
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/makeup.jpg')}}" alt="Makeup" style="width: 150px;height: 130px;">
-								<div class="product-details">
-									<h6>Makeup kit 
-								</h6>
-									<div class="price">
-										<h6>$300.00</h6>
-										<h6 class="l-through">$370.00</h6>
-									</div>
-								<div class="prd-bottom">
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/camera.jpg')}}" alt="Camera" style="width: 150px;height: 130px;">
-								<div class="product-details">
-									<h6>DSLR camera 
-						</h6>
-									<div class="price">
-										<h6>$800.00</h6>
-										<h6 class="l-through">$990.00</h6>
-									</div>
-								<div class="prd-bottom">
+					@endforeach
 
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/spray.jpg')}}" alt="Bodyspray" style="width: 150px;height: 130px;">
-								<div class="product-details">
-									<h6>Bodyspray
-										</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/football.jpg')}}" alt="football" style="width: 150px;height: 130px;">
-								<div class="product-details">
-									<h6>Football
-										</h6>
-									<div class="price">
-										<h6>$50.00</h6>
-										<h6 class="l-through">$90.00</h6>
-									</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/knife.jpg')}}" alt="Knife" style="width: 150px;height: 130px;">
-								<div class="product-details">
-									<h6>Hunting Knife
-										</h6>
-									<div class="price">
-										<h6>$160.00</h6>
-										<h6 class="l-through">$200.00</h6>
-									</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/durbin.jpg')}}" alt="Binocular" style="width: 150px;height: 130px;">
-								<div class="product-details">
-									<h6>Binocular
-										</h6>
-									<div class="price">
-										<h6>$750.00</h6>
-										<h6 class="l-through">$800.00</h6>
-									</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/ssd.jpg')}}" alt="ssd" style="width: 150px;height: 130px;">
-								<div class="product-details">
-									<h6>SSD storage
-										</h6>
-									<div class="price">
-										<h6>$500.00</h6>
-										<h6 class="l-through">$650.00</h6>
-									</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/jewelry.jpg')}}" alt="ring" style="width: 150px;height: 130px;">
-								<div class="product-details">
-									<h6>Jewlry Ring
-										</h6>
-									<div class="price">
-										<h6>$2000.00</h6>
-										<h6 class="l-through">$2100.00</h6>
-									</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/sofa.jpg')}}" alt="Sofa" style="width: 150px;height: 130px;">
-								<div class="product-details">
-									<h6>Sofa set
-										</h6>
-									<div class="price">
-										<h6>$1000.00</h6>
-										<h6 class="l-through">$1100.00</h6>
-									</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="{{url('frontend/img/product/powerbank.jpg')}}" alt="powerbank" style="width: 150px;height: 130px;">
-								<div class="product-details">
-									<h6>powerbank
-										</h6>
-									<div class="price">
-										<h6>$200.00</h6>
-										<h6 class="l-through">$250.00</h6>
-									</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
+					<span style="padding-top: 10px">
+						{!!$product->withQueryString()->links('pagination::bootstrap-5')!!}
+					</span>
 				</div>
 			</div>
-		</div>
+		</div> 
 		<!-- single product slide -->
 		
 	</section>
