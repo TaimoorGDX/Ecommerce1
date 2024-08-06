@@ -66,31 +66,48 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
+
+              @if(session()->has('message'))
+
+              <div class="alert alert-success">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">X</button>
+                  {{session()->get('message')}}
+
+              </div>
+
+              @endif
+
           <div class="div_center">
             <h1 class="font_size">Add Product</h1>
             <div class="form_container">
-              <form action="{{url('/add_product')}}" method="" enctype="multipart/form-data">
+              <form action="{{url('/add_product')}}" method="POST" enctype="multipart/form-data">
                @csrf
 
                 <div>
                   <label for="title">Product Title :</label>
-                  <input class="text_color" type="text" id="title" name="title" placeholder="Write a title" required>
+                  <input class="text_color" type="text" id="title" name="title" placeholder="Write a title" required="">
                 </div>
                 <div>
                   <label for="description">Product Description :</label>
-                  <input class="text_color" type="text" id="description" name="description" placeholder="Write a description" required>
+                  <input class="text_color" type="text" id="description" name="description" placeholder="Write a description" required="">
                 </div>
                 <div>
                   <label for="price">Product Price :</label>
-                  <input class="text_color" type="number" id="price" name="price" placeholder="Write a price" required>
+                  <input class="text_color" type="number" id="price" name="price" placeholder="Enter price" required="">
                 </div>
+
+                <div>
+                  <label for="price">Discount Price :</label>
+                  <input class="text_color" type="number" id="price" name="dis_price" placeholder="Enter discount price" >
+                </div>
+
                 <div>
                   <label for="quantity">Product Quantity :</label>
-                  <input class="text_color" type="number" id="quantity" name="quantity" min="0" placeholder="Write a quantity" required>
+                  <input class="text_color" type="number" id="quantity" name="quantity" min="0" placeholder="Write a quantity" required="">
                 </div>
                 <div>
                   <label for="category">Product Category :</label>
-                  <select class="text_color" id="category" name="category" required>
+                  <select class="text_color" id="category" name="category" required="">
                     <option value="" disabled selected>Select category</option>
                     @foreach($category as $category)
                     <option value="{{$category->category_name}}">{{$category->category_name}}</option>

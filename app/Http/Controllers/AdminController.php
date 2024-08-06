@@ -29,6 +29,16 @@ class AdminController extends Controller
         
         return redirect()->back()->with('message','Category Added Successfully');
     }
+
+    public function delete_category($id)
+    {
+        $data=category::find($id);
+        $data->delete();
+
+        return redirect()->back()->with('message','Category Deleted Successfully');
+
+    }
+
     public function view_product()
     {
         $category= category::all();
@@ -49,16 +59,6 @@ class AdminController extends Controller
         $request->image->move('product', $imagename);
         $product->image = $imagename;
         $product->save();
-        return redirect()->back();
+        return redirect()->back()->with('message','Product Added Successfully');
     }
-
-    public function delete_category($id)
-    {
-        $data=category::find($id);
-        $data->delete();
-
-        return redirect()->back()->with('message','Category Deleted Successfully');
-
-    }
-
 }
