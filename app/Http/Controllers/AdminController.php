@@ -46,19 +46,30 @@ class AdminController extends Controller
     }
     public function add_product(Request $request)
     {
-        $product=new product;
-        
+        $product = new Product;
+
         $product->title = $request->title;
         $product->description = $request->description;
         $product->price = $request->price;
         $product->quantity = $request->quantity;
         $product->discount_price = $request->dis_price;
         $product->category = $request->category;
-        $image = $request->image;
-        $imagename=time().'.'.$$image->getClientOriginalExtension();
-        $request->image->move('product', $imagename);
-        $product->image = $imagename;
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imagename = time().'.'.$image->getClientOriginalExtension();
+            $request->image->move('product', $imagename);
+            $product->image = $imagename;
+        }
+
         $product->save();
-        return redirect()->back()->with('message','Product Added Successfully');
+        return redirect()->back()->with('message', 'Product Added Successfully');
+    }
+
+    public function show_product()
+    {
+        $product=product::all();
+        return view('admin.show_product',compact('product'));
+
     }
 }

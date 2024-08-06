@@ -1,16 +1,16 @@
 <?php
 use App\Http\Controllers\HomeController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Route;
 
-route::get('/',[HomeController::class,'index']);
-route::get('/cart',[HomeController::class,'cart']);
-route::get('/category',[HomeController::class,'category']);
-route::get('/checkout',[HomeController::class,'checkout']);
-route::get('/confirmation',[HomeController::class,'confirmation']);
-route::get('/tracking',[HomeController::class,'tracking']);
-route::get('/single_product',[HomeController::class,'single_product']);
-route::get('/contact',[HomeController::class,'contact']);
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/cart', [HomeController::class, 'cart']);
+Route::get('/category', [HomeController::class, 'category']);
+Route::get('/checkout', [HomeController::class, 'checkout']);
+Route::get('/confirmation', [HomeController::class, 'confirmation']);
+Route::get('/tracking', [HomeController::class, 'tracking']);
+Route::get('/single_product', [HomeController::class, 'single_product']);
+Route::get('/contact', [HomeController::class, 'contact']);
 
 Route::middleware([
     'auth:sanctum',
@@ -21,16 +21,13 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-route::get('/redirect',[HomeController::class,'redirect']);
 
-route::get('/view_category',[AdminController::class,'view_category']);
+Route::get('/redirect', [HomeController::class, 'redirect']);
 
-route::post('/add_category',[AdminController::class,'add_category']);
+Route::get('/view_category', [AdminController::class, 'view_category']);
+Route::post('/add_category', [AdminController::class, 'add_category']);
+Route::get('/delete_category/{id}', [AdminController::class, 'delete_category']);
+Route::get('/view_product', [AdminController::class, 'view_product']);
+Route::post('/add_product', [AdminController::class, 'add_product']);
 
-route::get('/delete_category/{id}',[AdminController::class,'delete_category']);
-
-route::get('/view_product',[AdminController::class,'view_product']);
-
-route::post('/add_product',[AdminController::class,'add_product']);
-
-
+Route::get('/show_product', [AdminController::class, 'show_product']);
